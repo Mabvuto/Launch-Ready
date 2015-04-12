@@ -43,6 +43,10 @@ namespace NASALiftSim
             InitializeComponent();
             progBar.Value = 0;
             updateScreen();
+
+            pictureBox11.BringToFront();
+
+           // OPEN
         }
 
         private void updateScreen() {
@@ -252,6 +256,22 @@ namespace NASALiftSim
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Liftoff mass: 939 tons\nLiftoff height: 62.2 m\nThrust: 15,000 kN\n3 stage rocket\nFirst launched in 1997");
+        }
+
+        private void prelaunchPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Travel to asteroids or small planets close to Earth. Collect data on mineral composition, magnetic fields and other properties.Due to reduced travel distance, this mission is quicker and cheaper. Budget: $152.3 million");
+        }
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+            pictureBox11.SendToBack();
+            pictureBox11.Visible = false;
         }
 
 

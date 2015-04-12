@@ -86,6 +86,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.fuelTrack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.payloadTrack)).BeginInit();
             this.missionPanel.SuspendLayout();
@@ -111,6 +112,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.SuspendLayout();
             // 
             // progBar
@@ -237,7 +239,7 @@
             this.missionPanel.Controls.Add(this.pictureBox3);
             this.missionPanel.Controls.Add(this.pictureBox2);
             this.missionPanel.Controls.Add(this.pictureBox1);
-            this.missionPanel.Location = new System.Drawing.Point(28, 653);
+            this.missionPanel.Location = new System.Drawing.Point(26, 617);
             this.missionPanel.Name = "missionPanel";
             this.missionPanel.Size = new System.Drawing.Size(1167, 436);
             this.missionPanel.TabIndex = 17;
@@ -381,10 +383,11 @@
             // 
             this.prelaunchPanel.Controls.Add(this.button4);
             this.prelaunchPanel.Controls.Add(this.groupBox3);
-            this.prelaunchPanel.Location = new System.Drawing.Point(177, 583);
+            this.prelaunchPanel.Location = new System.Drawing.Point(152, 597);
             this.prelaunchPanel.Name = "prelaunchPanel";
             this.prelaunchPanel.Size = new System.Drawing.Size(1171, 436);
             this.prelaunchPanel.TabIndex = 18;
+            this.prelaunchPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.prelaunchPanel_Paint);
             // 
             // groupBox3
             // 
@@ -638,6 +641,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox8
             // 
@@ -721,21 +725,34 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.pictureBox11.Image = global::NASALiftSim.Properties.Resources.launchready;
+            this.pictureBox11.Location = new System.Drawing.Point(3, 2);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(1293, 515);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 20;
+            this.pictureBox11.TabStop = false;
+            this.pictureBox11.Click += new System.EventHandler(this.pictureBox11_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1295, 509);
+            this.ClientSize = new System.Drawing.Size(1295, 508);
+            this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.finalPanel);
             this.Controls.Add(this.takeoffPanel);
             this.Controls.Add(this.prelaunchPanel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
+            this.Controls.Add(this.missionPanel);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.picBox);
             this.Controls.Add(this.progBar);
             this.Controls.Add(this.lblCountDown);
-            this.Controls.Add(this.missionPanel);
             this.Controls.Add(this.rocketPanel);
             this.Name = "Form1";
             this.Text = "Launch Ready - Space Launch Simulation Game!";
@@ -771,6 +788,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -836,6 +854,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.PictureBox pictureBox11;
     }
 }
 
